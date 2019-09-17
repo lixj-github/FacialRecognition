@@ -42,6 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         imagePicker.dismiss(animated: true, completion: nil)
 
+        
     }
     
     func detect(image: CIImage) {
@@ -49,7 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
         //            fatalError("Loading CoreML Model Failed.")
         //        }
-        guard let model = try? VNCoreMLModel(for: FacialMLModel3().model) else {
+        guard let model = try? VNCoreMLModel(for: BeverageMLModel().model) else {
             fatalError("Loading Facial CoreML Model Failed.")
         }
         
@@ -57,25 +58,41 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            //print(results)
-            
+            print(results)
             if let firstResult = results.first {
-                if firstResult.identifier.contains("Steven Li"){
-                    self.nameLabel.text = "Steven Li"
+                if firstResult.identifier.contains("Pepsi CAN"){
+                    self.nameLabel.text = "Pepsi CAN"
                 }
-                else if firstResult.identifier.contains("Sophia Li"){
-                    self.nameLabel.text = "Sophia Li"
+                else if firstResult.identifier.contains("Diet Pepsi CAN"){
+                    self.nameLabel.text = "Diet Pepsi CAN"
                 }
-                else if firstResult.identifier.contains("Steve Jobs"){
-                    self.nameLabel.text = "Steve Jobs"
-                }
-                else if firstResult.identifier.contains("Bruce Willis"){
-                    self.nameLabel.text = "Bruce Willis"
+                else if firstResult.identifier.contains("Pepsi PET"){
+                    self.nameLabel.text = "Pepsi PET"
                 }
                 else {
                     self.nameLabel.text = "Other, Not Identified!"
                 }
             }
+
+            
+            
+//            if let firstResult = results.first {
+//                if firstResult.identifier.contains("Steven Li"){
+//                    self.nameLabel.text = "Steven Li"
+//                }
+//                else if firstResult.identifier.contains("Sophia Li"){
+//                    self.nameLabel.text = "Sophia Li"
+//                }
+//                else if firstResult.identifier.contains("Steve Jobs"){
+//                    self.nameLabel.text = "Steve Jobs"
+//                }
+//                else if firstResult.identifier.contains("Bruce Willis"){
+//                    self.nameLabel.text = "Bruce Willis"
+//                }
+//                else {
+//                    self.nameLabel.text = "Other, Not Identified!"
+//                }
+//            }
         }
         
         let handler = VNImageRequestHandler(ciImage: image)

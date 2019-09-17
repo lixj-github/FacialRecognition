@@ -16,6 +16,7 @@
 		D813D62C2330601300817868 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D813D62B2330601300817868 /* camera.jpg */; };
 		D813D62E2330620500817868 /* FacialMLModel2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D813D62D2330620500817868 /* FacialMLModel2.mlmodel */; };
 		D813D63023306A3300817868 /* FacialMLModel3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D813D62F23306A3300817868 /* FacialMLModel3.mlmodel */; };
+		D813D6322330716500817868 /* BeverageMLModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D813D6312330716500817868 /* BeverageMLModel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D813D62B2330601300817868 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		D813D62D2330620500817868 /* FacialMLModel2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FacialMLModel2.mlmodel; sourceTree = "<group>"; };
 		D813D62F23306A3300817868 /* FacialMLModel3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FacialMLModel3.mlmodel; sourceTree = "<group>"; };
+		D813D6312330716500817868 /* BeverageMLModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BeverageMLModel.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D813D62323305D3000817868 /* Info.plist */,
 				D813D62D2330620500817868 /* FacialMLModel2.mlmodel */,
 				D813D62F23306A3300817868 /* FacialMLModel3.mlmodel */,
+				D813D6312330716500817868 /* BeverageMLModel.mlmodel */,
 				D813D6292330600400817868 /* photo.png */,
 				D813D62B2330601300817868 /* camera.jpg */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D813D6322330716500817868 /* BeverageMLModel.mlmodel in Sources */,
 				D813D62E2330620500817868 /* FacialMLModel2.mlmodel in Sources */,
 				D813D61A23305D2F00817868 /* ViewController.swift in Sources */,
 				D813D61823305D2F00817868 /* AppDelegate.swift in Sources */,
