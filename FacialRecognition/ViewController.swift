@@ -58,7 +58,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            print(results)
+            print(results.first)
+            
             if let firstResult = results.first {
                 if firstResult.identifier.contains("Pepsi CAN"){
                     self.nameLabel.text = "Pepsi CAN"
